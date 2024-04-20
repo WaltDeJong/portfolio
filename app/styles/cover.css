@@ -1,0 +1,120 @@
+.coverContainer {
+    background-image: url('/images/cover.webp');
+    background-size: cover;
+    background-position: center;
+    margin: -20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.navBarContainer {
+    width: 100%;
+}
+
+
+
+
+.coverContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 20px);
+}
+
+.coverContentHeader {
+    color: #194D33;
+    margin-left: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.coverMiddleRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+.introText {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 40px;
+    color: #194D33;
+    overflow: visible;
+}
+
+.typewriterContainer {
+    width: 5px;
+    word-wrap: break-word; /* Ensures words break and wrap to the next line */
+    overflow-wrap: break-word;
+    
+}
+
+.coverImage {
+    flex: 0 1 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctaButton {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctaButton button {
+    padding: 20px 40px;
+    font-size: 25px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.ctaButton button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .coverMiddleRow {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .coverContentHeader {
+        margin: 0;
+        text-align: center;
+    }
+
+    .introText, .coverImage, .ctaButton {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .typewriterContainer{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+  
+  

@@ -1,0 +1,99 @@
+.educationContainer {
+    display: flex;
+    flex-direction: column; /* Default to column layout for overall container */
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure it covers the full view horizontally */
+    background-image: url('/images/educationBackground.webp'); /* Background image for the whole container */
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0; /* Padding for better spacing around the content */
+  }
+  
+  .educationText{
+    color: #194D33;
+    text-align: center;
+    padding: 20px;
+    padding-top: 20px;
+  }
+  .educationText p{
+    text-align: left;
+    text-indent: 30px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+   .educationDetails {
+    width: 100%; /* Adjust width as needed for mobile */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background for readability */
+    color: #ffffff; /* White text color for contrast */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Optional: adds subtle shadow for depth */
+  }
+
+  .educationDetailsHeaderText{
+    text-align: center;
+  }
+  
+  .imagesRow {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    align-items: center; /* Centers the images vertically */
+    margin-bottom: 20px; /* Adds space below the row */
+  }
+  
+  .imagesRow img {
+    width: auto; /* Maintains the aspect ratio */
+    max-width: 48%; /* Adjusts maximum width to fit side by side */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 0 10px; /* Adds space between the images */
+    border-radius: 4px; /* Rounded corners for the images */
+  }
+  .microMastersButton{
+    padding: 20;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 5px 20px 5px 20px;
+    background-color: rgb(17, 53, 131);
+  }
+
+  .microMastersButton:hover{
+    background-color: rgb(32, 78, 177);
+  }
+  
+  ul {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;
+  }
+  
+  ul li {
+    padding: 5px 0; /* Space between list items */
+  }
+  
+  /* Media Query for desktop and larger devices */
+  @media (min-width: 768px) {
+    .educationContainer {
+      flex-direction: row; /* Change to row layout for larger screens */
+      align-items: flex-start; /* Align items at the start of the container */
+    }
+  
+    .educationText, .educationDetails {
+      width: 50%; /* Each section takes up half the width of the container */
+      margin: 0 10px; /* Add some horizontal spacing */
+    }
+  }
+  
+  /* Adjustments for very small screens, ensure responsiveness */
+  @media (max-width: 480px) {
+    .imagesRow img {
+      width: 100%; /* Full width for very small devices */
+    }
+  }
+  
+  
+  
+  
+  
+  

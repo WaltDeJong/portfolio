@@ -1,0 +1,47 @@
+.technologiesBanner {
+    background-color: #194D33;
+    opacity: 0.9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly between items */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping to keep all items in a single line */
+    overflow-x: auto; /* Allows horizontal scrolling if items exceed viewport width */
+  }
+  
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    flex: 1; /* Allows each item to grow and take up equal space */
+  }
+  
+  .tech-icon {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 5px; /* Space between icon and text */
+  }
+  
+  .icon-container span {
+    color: white;
+    font-size: 0.8rem; /* Smaller text size for labels */
+  }
+  
+  @media (max-width: 768px) {
+    .technologiesBanner {
+      justify-content: center; /* Center items on smaller screens */
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+    .icon-container {
+      flex: 0 1 25%; /* Adjusts so there are four icons per row on small screens */
+    }
+    .tech-icon {
+      font-size: 1.5rem; /* Adjust size for smaller screens if needed */
+    }
+  }
+  
+  
+  
+  
+  

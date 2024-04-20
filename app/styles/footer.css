@@ -1,0 +1,112 @@
+.footer {
+    background-image: url('/images/educationBackground.webp');
+    background-size: cover;
+    background-position: center;
+    color: #194D33;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a {
+    color: #0a66c2;
+    margin: 10px;
+    display: inline-block;
+}
+
+.contact-form {
+    margin-top: 10px;
+    width: 80%; /* Form takes up 80% of the footer width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Distribute space between children */
+}
+
+.form-row label {
+    flex-basis: 48%; /* Adjust this value based on your exact needs */
+}
+
+.contact-form label {
+    margin: 10px;
+    color: #194D33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Labels take full width of the form */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Inputs and textarea take full width of their parent */
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+.contact-form textarea {
+    height: 100px; /* Fixed height for textarea */
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 30px 50px;
+    }
+
+    .contact-form {
+        width: 500px; /* Set form width to 200px on desktop */
+        flex-direction: column; /* Keeps the vertical layout */
+        align-items: center; /* Center aligns the form elements */
+        justify-content: center; /* Centers the content vertically if needed */
+    }
+
+    .form-row {
+        flex-wrap: nowrap; /* Prevent wrapping inside the row */
+    }
+
+    .form-row label {
+        flex-basis: 100%; /* Each label takes full width inside the narrow form */
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%; /* Ensure all form elements expand to fill the form width */
+    }
+}
+
+
+
+
+
