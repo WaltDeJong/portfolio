@@ -70,7 +70,7 @@ function Footer() {
                         </form>
                     </>
                 )}
-                <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/waltdejong0/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedinIn size={30} />
                 </a>
             </div>
