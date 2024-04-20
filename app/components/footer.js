@@ -48,12 +48,12 @@ function Footer() {
     return (
         <footer className="footer" id='footer'>
             <div className="footer-content">
-                <h3>Let's Connect!</h3>
+                <h3>Let&apos;s Connect!</h3>
                 {submitted ? (
-                    <p>Thanks for reaching out! I'll get back to you soon.</p>
+                    <p>Thanks for reaching out! I&apos;ll get back to you soon.</p>
                 ) : (
                     <>
-                        <p>If you have any questions or just want to connect, don't hesitate to reach out.</p>
+                        <p>If you have any questions or just want to connect, don&apos;t hesitate to reach out.</p>
                         <form className="contact-form" onSubmit={handleSubmit}>
                             <div className="form-row">
                                 <label htmlFor="from_name">Name:

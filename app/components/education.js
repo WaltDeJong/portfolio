@@ -8,9 +8,9 @@ function Education() {
     <div className="educationContainer" id='education'>
       <div className="educationText">
         <h2>Education and Learning</h2>
-        <p>I love learning. Transitioning from a psychology degree at McMaster to criminology, and from horticulture studies at the University of Guelph as a municipal horticulturalist, my career has been a journey of continuous skill development. I've discovered coding is my passion and I love creating things that are efficient, elegant and amazing </p>
+        <p>I love learning. Transitioning from a psychology degree at McMaster University to criminology, and from horticulture studies at the University of Guelph as a municipal horticulturalist, my career has been a journey of continuous skill development. I&apos;ve discovered coding is my passion and I love creating things that are efficient, elegant and amazing </p>
         <p>This journey includes completing an extensive Software Development program consisting of six rigorous graduate-level courses offered by the University of British Columbia.</p>
-        <p>I'm adaptable and continuously learning new technologies from documentation, project based learning, and a multitude of online courses.  I believe there is always a solution, it just takes work.</p>
+        <p>I&apos;m adaptable and continuously learning new technologies from documentation, project based learning, and a multitude of online courses.  I believe there is always a solution, it just takes work.</p>
       </div>
       <div className="educationDetails">
         <div className="imagesRow">

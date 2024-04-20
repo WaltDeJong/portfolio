@@ -1,6 +1,7 @@
 import Navbar from './navbar';
 import Typewriter from './typewriter';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/cover.css'; 
 
 function Cover() {
@@ -20,12 +21,12 @@ function Cover() {
             </div>
             <div className='coverContent'>
                 <div className='coverContentHeader'>
-                    <h1>LET'S GROW.</h1>
+                    <h1>LET&apos;S GROW.</h1>
                     <h3>Innovative solutions rooted in creativity</h3>
                 </div>
                 <div className='coverMiddleRow'>
                     <div className='introText'>
-                        <p>Hi, I'm <span className='coverHighlight'>Walter</span> — I'm a Full Stack Javascript Developer that loves solving problems with</p>
+                        <p>Hi, I&apos;m <span className='coverHighlight'>Walter</span> — I&apos;m a Full Stack Javascript Developer that loves solving problems with</p>
                          <div className='typewriterContainer'>
                          <Typewriter words={skills} />
                          </div>
@@ -35,7 +36,7 @@ function Cover() {
                         <Image src="/images/grow.png" alt="Grow" width={350} height={350} />
                     </div>
                     <div className='ctaButton'>
-                        <button>View My Work</button>
+                        <button> <Link className='deskTopLink' href="/#projects">View My Work</Link></button>
                     </div>
                 </div>
             </div>
