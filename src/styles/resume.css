@@ -1,0 +1,391 @@
+/* ============================================================
+   RESUME SECTION
+   Unified experience + education timeline.
+   Background: educationBackground.webp (consistent with site).
+   Work entries: #194D33 green. Education entries: #1E3A8A blue.
+   ============================================================ */
+
+.rs-section {
+  background-image: url('/images/educationBackground.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 90px 40px 120px;
+}
+
+/* Centered inner wrapper */
+.rs-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* ── Section heading ────────────────────────────────────────────────────── */
+
+.rs-heading {
+  margin-bottom: 64px;
+  max-width: 680px;
+}
+
+.rs-section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #194D33;
+  margin: 0 0 18px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.rs-amp {
+  color: #194D33;
+  opacity: 0.45;
+}
+
+.rs-narrative {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(0, 0, 0, 0.68);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Timeline container ─────────────────────────────────────────────────── */
+
+.rs-container {
+  position: relative;
+}
+
+/* ── Vertical rule ──────────────────────────────────────────────────────── */
+
+.rs-line-track {
+  position: absolute;
+  left: 19px; /* center of 40px dot column */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  pointer-events: none;
+}
+
+.rs-line {
+  width: 2px;
+  height: 0; /* grown by JS scroll handler */
+  background: linear-gradient(to bottom, #194D33, #1E3A8A);
+}
+
+/* ── Entry row ──────────────────────────────────────────────────────────── */
+
+.rs-entry {
+  display: flex;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.rs-entry--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger visible delay per entry via nth-child */
+.rs-entry:nth-child(2) { transition-delay: 0.05s; }
+.rs-entry:nth-child(3) { transition-delay: 0.10s; }
+.rs-entry:nth-child(4) { transition-delay: 0.15s; }
+.rs-entry:nth-child(5) { transition-delay: 0.20s; }
+.rs-entry:nth-child(6) { transition-delay: 0.25s; }
+.rs-entry:nth-child(7) { transition-delay: 0.30s; }
+
+/* ── Dot column ─────────────────────────────────────────────────────────── */
+
+.rs-dot-col {
+  width: 40px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.rs-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.rs-entry--work .rs-dot {
+  background-color: #194D33;
+}
+
+.rs-entry--education .rs-dot {
+  background-color: #1E3A8A;
+}
+
+.rs-entry:hover .rs-dot {
+  transform: scale(1.5);
+}
+
+/* ── Entry content area ─────────────────────────────────────────────────── */
+
+.rs-content {
+  flex: 1;
+  padding: 0 0 64px 28px;
+  transition: background 0.2s ease;
+  border-radius: 8px;
+}
+
+/* ── Header: logo + title group ─────────────────────────────────────────── */
+
+.rs-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.rs-logo {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+/* Favicon image */
+.rs-favicon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* "S" circle placeholder */
+.rs-logo-circle {
+  width: 32px;
+  height: 32px;
+  background-color: #194D33;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Code bracket icon */
+.rs-code-icon {
+  color: #194D33;
+  font-size: 1.8rem;
+}
+
+/* ── Title group ────────────────────────────────────────────────────────── */
+
+.rs-title-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.rs-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.rs-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.25;
+  color: #0f1f14;
+}
+
+.rs-company {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.rs-entry--work .rs-company {
+  color: #194D33;
+}
+
+.rs-entry--education .rs-company {
+  color: #1E3A8A;
+}
+
+/* ── Type pill ──────────────────────────────────────────────────────────── */
+
+.rs-type-pill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.rs-type-pill--work {
+  background: rgba(25, 77, 51, 0.1);
+  color: #194D33;
+}
+
+.rs-type-pill--education {
+  background: rgba(30, 58, 138, 0.1);
+  color: #1E3A8A;
+}
+
+/* ── Status badge ───────────────────────────────────────────────────────── */
+
+.rs-badge {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #194D33;
+  border: 1px solid rgba(25, 77, 51, 0.35);
+  padding: 2px 8px;
+  border-radius: 100px;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+/* ── Dates ──────────────────────────────────────────────────────────────── */
+
+.rs-dates {
+  font-size: 0.77rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  opacity: 0.5;
+  color: #0f1f14;
+}
+
+/* ── Description ────────────────────────────────────────────────────────── */
+
+.rs-description {
+  font-size: 0.95rem;
+  line-height: 1.72;
+  color: rgba(0, 0, 0, 0.72);
+  font-weight: 500;
+  max-width: 620px;
+  margin: 0 0 14px;
+}
+
+/* ── Credential link ────────────────────────────────────────────────────── */
+
+.rs-credential {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.rs-credential:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ── Skills chips ───────────────────────────────────────────────────────── */
+
+.rs-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+.rs-skill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+/* ── Client site favicon row ────────────────────────────────────────────── */
+
+.rs-site-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.rs-site-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 500;
+}
+
+.rs-site-link:hover {
+  opacity: 1;
+}
+
+.rs-site-link img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .rs-section {
+    padding: 60px 20px 80px;
+  }
+
+  .rs-section-title {
+    font-size: 1.6rem;
+  }
+
+  .rs-narrative {
+    font-size: 0.95rem;
+  }
+
+  .rs-heading {
+    margin-bottom: 48px;
+  }
+
+  .rs-title {
+    font-size: 1rem;
+  }
+
+  .rs-description {
+    font-size: 0.9rem;
+  }
+
+  .rs-content {
+    padding-bottom: 48px;
+    padding-left: 20px;
+  }
+
+  .rs-site-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

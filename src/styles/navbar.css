@@ -1,0 +1,78 @@
+/* General Link Styles */
+a {
+    text-decoration: none; /* Removes underline from all hyperlinks */
+    color: inherit; /* Ensures links use the inherited text color */
+}
+
+/* Navbar overall layout */
+.navBarLogo {
+    display: flex;
+    justify-content: space-between; /* Separates logo and menu */
+    align-items: center; /* Centers items vertically */
+    padding: 0 20px; /* Adds some padding on both sides */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/* Desktop Menu Styles */
+.desktopNavContainer {
+    display: flex;
+    gap: 20px; /* Adds space between menu items */
+    margin: 20px;
+}
+
+/* Mobile Navigation Container - Hidden on desktop */
+.mobileNavContainer {
+    display: none; /* Ensured to be hidden on desktop */
+    margin-top: 20px;
+}
+
+/* Mobile Hamburger Icon Styles */
+.menuIcon {
+    display: none; /* Hidden by default, shown in mobile */
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 20px;
+    margin-top: -80px;
+}
+
+@media (max-width: 768px) {
+    .menuIcon {
+        display: block; /* Shows the hamburger icon */
+        margin-left: auto; /* Pushes the button to the right */
+    }
+
+    .desktopNavContainer {
+        display: none; /* Hides desktop navigation on mobile */
+    }
+
+    /* Mobile Navigation Layout */
+    .navBarLogo {
+        flex-direction: column; /* Stacks logo and menu vertically */
+        align-items: flex-start; /* Aligns items to the left */
+        margin-left: 0px;
+    }
+
+    /* Mobile Navigation Container */
+    .mobileNavContainer {
+        flex-direction: column; /* Stacks links vertically */
+        gap: 10px; /* Adds space between links */
+        align-items: center; /* Aligns links to center */
+        padding: 20px 0; /* Adds vertical padding for spacing */
+        width: 100%; /* Ensures full width */
+    }
+
+    .mobileNavContainer.active {
+        display: flex; /* Displays the container flexibly on active */
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,434 @@
+/* ============================================================
+   RESUME CONSTELLATION  —  light section after dark Bundles
+   #194D33 brand green · #1a2336 dark navy · #ebebeb bg
+   ============================================================ */
+
+.rc-section {
+  background-color: #e8e8e8;
+  background-image: url('/images/ConstellationBackground.png');
+  background-size: cover;
+  background-position: center;
+  padding: 90px 40px 90px;
+}
+
+/* ── Heading ─────────────────────────────────────────────────────────────── */
+
+.rc-heading-area {
+  max-width: 980px;
+  margin: 0 auto 28px;
+}
+
+.rc-eyebrow {
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #194D33;
+  margin: 0 0 8px;
+  opacity: 0.65;
+}
+
+.rc-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #194D33;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.rc-sub {
+  font-size: 0.86rem;
+  color: rgba(26, 35, 54, 0.5);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.rc-bridge-pill {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(59,111,191,0.15) 50%, rgba(176,96,48,0.15) 50%);
+  color: #555;
+  font-size: 0.78rem;
+  padding: 1px 7px;
+  border-radius: 100px;
+  border: 1px solid rgba(0,0,0,0.1);
+  vertical-align: middle;
+}
+
+/* ── Outer card (single box containing both panels) ─────────────────────── */
+
+.rc-outer {
+  display: flex;
+  max-width: 980px;
+  margin: 0 auto;
+  height: 540px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.09);
+  box-shadow: 0 4px 28px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+/* ── Left: canvas panel ──────────────────────────────────────────────────── */
+
+.rc-left {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+  background: #f0f0f0;
+}
+
+.rc-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Cluster label — top-left overlay inside canvas panel */
+.rc-cluster-label {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(25, 77, 51, 0.6);
+  pointer-events: none;
+  user-select: none;
+  animation: rc-fade 0.2s ease;
+}
+
+/* Reset — top-right of canvas panel */
+.rc-reset-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: rgba(26,35,54,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding-bottom: 1px;
+  transition: background 0.15s, color 0.15s;
+}
+.rc-reset-btn:hover { background: #fff; color: rgba(26,35,54,0.9); }
+
+/* Bundle legend — bottom-left of canvas panel */
+.rc-legend {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.rc-leg-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.69rem;
+  font-weight: 600;
+  color: rgba(26,35,54,0.48);
+  padding: 0;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+.rc-leg-btn:hover, .rc-leg-btn--on { color: rgba(26,35,54,0.9); }
+
+.rc-leg-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.15s;
+}
+.rc-leg-btn--on .rc-leg-dot { transform: scale(1.5); }
+
+/* Hover tooltip — inside canvas panel */
+.rc-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 7px;
+  padding: 6px 10px;
+  font-size: 0.72rem;
+  color: #1a2336;
+  line-height: 1.45;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  z-index: 10;
+  transform: translateY(-50%);
+  animation: rc-fade 0.1s ease;
+}
+.rc-tooltip strong {
+  display: block;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #194D33;
+  margin-bottom: 1px;
+}
+
+/* ── Right: info panel ───────────────────────────────────────────────────── */
+
+.rc-right {
+  width: 310px;
+  flex-shrink: 0;
+  border-left: 1px solid rgba(0,0,0,0.08);
+  overflow-y: auto;
+  /* hide scrollbar visually but keep functionality */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.12) transparent;
+}
+
+/* ── Selected node detail ────────────────────────────────────────────────── */
+
+.rc-detail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: rc-slide 0.28s ease;
+}
+
+.rc-detail-bar {
+  height: 5px;
+  flex-shrink: 0;
+}
+
+.rc-detail-body {
+  padding: 20px 22px 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.rc-detail-org-header {
+  margin-bottom: 14px;
+  min-height: 36px;
+}
+.rc-detail-logo {
+  max-height: 40px;
+  max-width: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+}
+
+.rc-detail-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.rc-detail-badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 100px;
+}
+
+.rc-detail-badge--bridge {
+  background: rgba(0,0,0,0.06);
+  color: rgba(26,35,54,0.55);
+}
+
+.rc-detail-title {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 5px;
+}
+
+.rc-detail-meta {
+  font-size: 0.74rem;
+  color: rgba(26,35,54,0.45);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 0 0 14px;
+}
+
+.rc-detail-summary {
+  font-size: 0.84rem;
+  line-height: 1.72;
+  color: rgba(26,35,54,0.68);
+  margin: 0 0 16px;
+}
+
+.rc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.rc-chip {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+}
+
+.rc-credential-link {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: opacity 0.15s ease;
+}
+.rc-credential-link:hover { opacity: 0.7; }
+
+.rc-detail-cluster {
+  font-size: 0.7rem;
+  color: rgba(26,35,54,0.38);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.rc-cluster-icon {
+  font-size: 0.85rem;
+  color: #194D33;
+  opacity: 0.5;
+}
+
+/* ── Default panel (nothing selected) ───────────────────────────────────── */
+
+.rc-default {
+  padding: 28px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rc-default-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #194D33;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.rc-default-sub {
+  font-size: 0.8rem;
+  color: rgba(26,35,54,0.5);
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+
+.rc-default-bundles {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.rc-default-bundle {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.rc-default-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.rc-default-bundle-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1a2336;
+  margin-bottom: 2px;
+}
+
+.rc-default-bundle-desc {
+  font-size: 0.73rem;
+  color: rgba(26,35,54,0.48);
+  line-height: 1.5;
+}
+
+.rc-default-hint {
+  font-size: 0.72rem;
+  color: rgba(26,35,54,0.35);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rc-hint-split {
+  font-size: 0.95rem;
+  color: rgba(26,35,54,0.4);
+}
+
+/* ── Animations ──────────────────────────────────────────────────────────── */
+
+@keyframes rc-slide {
+  from { opacity: 0; transform: translateX(6px); }
+  to   { opacity: 1; transform: translateX(0);   }
+}
+
+@keyframes rc-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 760px) {
+  .rc-outer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .rc-left {
+    height: 360px;
+    flex: none;
+  }
+
+  .rc-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    max-height: 320px;
+  }
+
+  .rc-default {
+    padding: 22px 18px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .rc-section {
+    padding: 60px 16px 70px;
+  }
+
+  .rc-title {
+    font-size: 1.55rem;
+  }
+
+  .rc-left { height: 310px; }
+}

@@ -1,0 +1,90 @@
+.projectsContainer {
+    background-color: #194D33; /* Dark green background */
+    color: white; /* White text color */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content */
+}
+
+.projectRow {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items */
+    padding-bottom: 20px;  /* Adds padding at the bottom inside the border */
+    margin-bottom: 20px;  /* Adds space between rows */
+    border-bottom: 1px solid #ccc;  
+}
+
+.projectImage {
+    width: 200px; /* Set a fixed width for all images */
+    height: 120px; /* Set a fixed height for all images */
+    overflow: hidden; /* Prevents overflow of the image outside the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectImage img {
+    width: 100%; /* Make image fill the container */
+    height: 100%; /* Make image fill the container */
+    object-fit: cover; /* Ensures the image covers the area without distorting the aspect ratio */
+}
+
+.projectInfo {
+    text-align: center; /* Center-align the text */
+    max-width: 80%; /* Optional: Restrains the width of the text for better readability */
+    align-self: center; /* Center the info block within its flex container */
+}
+
+.projectInfo h3 {
+    margin: 0 0 10px 0; /* Margin for the title */
+}
+
+.projectInfo p {
+    max-width: 100%; /* Allow full width of the text box in column layout */
+}
+
+.technologyList {
+    display: flex;        /* Sets the flex display mode to make children align horizontally */
+    flex-wrap: wrap;      /* Allows items to wrap onto the next line as needed */
+    justify-content: center; /* Centers the items horizontally */
+    margin: 10px 0;       /* Adds some vertical margin for spacing */
+}
+
+.technologyItem {
+    display: flex;        /* Enables flex layout for the icon and text */
+    flex-direction: column; /* Stacks the icon and text vertically */
+    align-items: center;  /* Centers the items horizontally within each technologyItem */
+    margin-right: 20px;   /* Adds some spacing between each technology icon */
+  
+}
+
+
+@media (min-width: 768px) {
+    .projectRow {
+        flex-direction: row; /* Side by side on desktop */
+        align-items: center; /* Align items to the center */
+        justify-content: start; /* Align content to the start */
+    }
+
+    .projectImage {
+        margin-right: 20px; /* Space between the image and the info */
+    }
+
+    .projectInfo {
+        align-items: center; /* Center-align the text vertically within the info block */
+        justify-content: center; /* Center-align the text horizontally within the info block */
+        text-align: left; /* Keep the text left-aligned for readability on larger screens */
+        max-width: 80%; /* Adjust width to fit beside the image */
+        width: 100%; /* Full width to fill the remaining space */
+    }
+}
+
+
+
+
+
+  
+  
