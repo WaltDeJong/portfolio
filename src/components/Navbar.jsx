@@ -12,12 +12,12 @@ const Navbar = () => {
     return (
         <nav className='navBarLogo'>
             <div className='navBarLogo'>
-                <a href="/">
-                    <img src="/images/logo.png" alt="Logo" width={75} height={75} />
+                <a href="/" aria-label="Walter De Jong — home">
+                    <img src="/images/logo.png" alt="Walter De Jong logo" width={75} height={75} />
                 </a>
             </div>
-            <button onClick={toggleMobileNav} className='menuIcon'>
-                <FiMenu />
+            <button onClick={toggleMobileNav} className='menuIcon' aria-label="Toggle navigation menu" aria-expanded={isMobileNavVisible}>
+                <FiMenu aria-hidden="true" />
             </button>
             <div className={isMobileNavVisible ? 'mobileNavContainer active' : 'mobileNavContainer'}>
                 <a className='mobileLink' href="#experience">Experience</a>

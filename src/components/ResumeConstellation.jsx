@@ -420,6 +420,22 @@ export default function ResumeConstellation() {
     // DataAnnotation anchored at canvas centre
     posMap['data-annotator'] = { bx: W * 0.5, by: H * 0.5 };
 
+    // Push any node too close to data-annotator outward
+    const da = posMap['data-annotator'];
+    const MIN_SEP = 72;
+    for (const [id, pos] of Object.entries(posMap)) {
+      if (id === 'data-annotator') continue;
+      const dx = pos.bx - da.bx, dy = pos.by - da.by;
+      const dist = Math.hypot(dx, dy) || 1;
+      if (dist < MIN_SEP) {
+        const scale = MIN_SEP / dist;
+        posMap[id] = {
+          bx: clamp(da.bx + dx * scale, 28, W - 28),
+          by: clamp(da.by + dy * scale, 28, H - 68),
+        };
+      }
+    }
+
     nodesRef.current = NODE_DATA.map(nd => {
       const { bx, by } = posMap[nd.id];
       const isDual = nd.bundle.length > 1;
@@ -644,6 +660,8 @@ export default function ResumeConstellation() {
             onClick={handleClick}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
+            role="img"
+            aria-label="Interactive career constellation. Click nodes to explore roles and credentials."
           />
 
           {/* Cluster label */}
@@ -665,6 +683,8 @@ export default function ResumeConstellation() {
                 key={key}
                 className={`rc-leg-btn${filterBundle === key ? ' rc-leg-btn--on' : ''}`}
                 onClick={e => { e.stopPropagation(); setFilterBundle(f => f === key ? null : key); setSelectedId(null); }}
+                aria-pressed={filterBundle === key}
+                aria-label={`Filter by ${label}`}
               >
                 <span className="rc-leg-dot" style={{ background: color }} />
                 {label}

@@ -31,7 +31,7 @@ function Cover() {
                         </div>
                     </div>
                     <div className='coverImage'>
-                        <img src="/images/Grow.png" alt="Grow" width={350} height={350} />
+                        <img src="/images/Grow.png" alt="Illustration representing growth and development" width={350} height={350} />
                     </div>
                     <div className='ctaButton'>
                         <button><a className='deskTopLink' href="#works">View My Projects</a></button>

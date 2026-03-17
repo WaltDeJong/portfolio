@@ -65,16 +65,16 @@ function Footer() {
                             <label htmlFor="message">Message:
                                 <textarea id="message" name="message" value={formData.message} onChange={handleChange} />
                             </label>
-                            <button type="submit">Send</button>
+                            <button type="submit" aria-label="Send message">Send</button>
                         </form>
                     </>
                 )}
                 <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '8px' }}>
-                    <a href="https://www.linkedin.com/in/waltdejong0/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedinIn size={30} />
+                    <a href="https://www.linkedin.com/in/waltdejong0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                        <FaLinkedinIn size={30} aria-hidden="true" />
                     </a>
-                    <a href="https://github.com/WaltDeJong" target="_blank" rel="noopener noreferrer">
-                        <FaGithub size={30} />
+                    <a href="https://github.com/WaltDeJong" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                        <FaGithub size={30} aria-hidden="true" />
                     </a>
                 </div>
             </div>

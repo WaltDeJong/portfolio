@@ -5,7 +5,7 @@
 const NODE_DATA = [
   {
     id: 'data-annotator',
-    title: 'Data Annotator / AI Evaluator',
+    title: 'Data Annotator (Software Developer)',
     org: 'DataAnnotation.tech',
     dates: '2024–Present',
     bundle: ['TECH'],

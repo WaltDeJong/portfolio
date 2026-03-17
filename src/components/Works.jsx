@@ -71,8 +71,8 @@ const CLIENT_SITES = [
     id: 'harpers',
     name: "Harper's Property Services",
     logo: '/images/HarperPropertyServices.png',
-    url: 'harperspropertyservices.ca',
-    href: 'https://harperspropertyservices.ca',
+    url: 'harperpropertyservices.ca',
+    href: 'https://www.harperpropertyservices.ca/',
     description:
       'Service company website built with pure React and Vite. Clean, fast, and optimised for local search. Integrated EmailJS for contact and quote requests. Managed Google Ads and Analytics to track leads and grow organic reach.',
     tech: ['React', 'Vite', 'Google Ads', 'Google Analytics', 'EmailJS'],
