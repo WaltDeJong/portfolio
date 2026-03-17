@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav className='navBarLogo'>
             <div className='navBarLogo'>
                 <a href="/" aria-label="Walter De Jong — home">
-                    <img src="/images/logo.png" alt="Walter De Jong logo" width={75} height={75} />
+                    <img src="/images/logo.webp" alt="Walter De Jong logo" width={75} height={75} />
                 </a>
             </div>
             <button onClick={toggleMobileNav} className='menuIcon' aria-label="Toggle navigation menu" aria-expanded={isMobileNavVisible}>

@@ -5,7 +5,7 @@
 
 .rc-section {
   background-color: #e8e8e8;
-  background-image: url('/images/ConstellationBackground.png');
+  background-image: url('/images/ConstellationBackground.webp');
   background-size: cover;
   background-position: center;
   padding: 90px 40px 90px;
@@ -330,7 +330,7 @@
 
 .rc-default-sub {
   font-size: 0.8rem;
-  color: rgba(26,35,54,0.5);
+  color: rgba(26,35,54,0.72);
   line-height: 1.65;
   margin: 0 0 24px;
 }
@@ -365,13 +365,13 @@
 
 .rc-default-bundle-desc {
   font-size: 0.73rem;
-  color: rgba(26,35,54,0.48);
+  color: rgba(26,35,54,0.7);
   line-height: 1.5;
 }
 
 .rc-default-hint {
   font-size: 0.72rem;
-  color: rgba(26,35,54,0.35);
+  color: rgba(26,35,54,0.65);
   margin: 0;
   display: flex;
   align-items: center;
@@ -380,7 +380,7 @@
 
 .rc-hint-split {
   font-size: 0.95rem;
-  color: rgba(26,35,54,0.4);
+  color: rgba(26,35,54,0.65);
 }
 
 /* ── Animations ──────────────────────────────────────────────────────────── */

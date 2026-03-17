@@ -9,10 +9,12 @@ function App() {
   return (
     <>
       <Cover />
-      <TechnologiesBanner />
-      <ResumeConstellation />
-      <TechnologiesBanner2 />
-      <Works />
+      <main>
+        <TechnologiesBanner />
+        <ResumeConstellation />
+        <TechnologiesBanner2 />
+        <Works />
+      </main>
       <Footer />
     </>
   )

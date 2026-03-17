@@ -95,14 +95,16 @@
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
-    color: white;
+    background-color: #0047a3;
+    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    min-height: 44px;
+    min-width: 44px;
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #003580;
 }
 
 @media (min-width: 768px) {

@@ -73,18 +73,23 @@
     align-items: center;
 }
 
-.ctaButton button {
+.ctaLink {
+    display: inline-block;
     padding: 20px 40px;
     font-size: 25px;
-    color: white;
-    background-color: #4CAF50;
-    border: none;
-    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #194D33;
     border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    min-height: 44px;
+    min-width: 44px;
 }
 
-.ctaButton button:hover {
-    background-color: #45a049;
+.ctaLink:hover {
+    background-color: #133d28;
 }
 
 @media (max-width: 768px) {

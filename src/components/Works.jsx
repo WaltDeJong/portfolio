@@ -70,7 +70,7 @@ const CLIENT_SITES = [
   {
     id: 'harpers',
     name: "Harper's Property Services",
-    logo: '/images/HarperPropertyServices.png',
+    logo: '/images/HarperPropertyServices.webp',
     url: 'harperpropertyservices.ca',
     href: 'https://www.harperpropertyservices.ca/',
     description:
@@ -90,15 +90,15 @@ const AI_PROJECTS = [
     tech: [],
     photos: [
       {
-        src: '/images/SignalaDashboard.png',
+        src: '/images/SignalaDashboard.webp',
         caption: 'A JWT-protected control panel for managing all site content and data. From a single interface you can create datasets, launch scrapers, write and publish articles, build narrative overlays, and review AI-generated chart previews before they go live.',
       },
       {
-        src: '/images/SignalaChartAgent.png',
+        src: '/images/SignalaChartAgent.webp',
         caption: 'An AI agent powered by Claude that builds and updates Plotly charts directly from database records. Given a plain-language prompt, it queries existing datasets, scrapes additional Statistics Canada data if needed, builds the chart configuration, and saves it so the public site serves it immediately — with a preview/approval step when rebuilding existing charts.',
       },
       {
-        src: '/images/SignalaTools.png',
+        src: '/images/SignalaTools.webp',
         caption: 'A suite of 8 Statistics Canada scrapers that fetch CSV exports directly from StatCan, normalize the records, and upsert them into the database. Each scraper targets a specific table covering employment trends, job vacancies, earnings, EI claims, hours worked, job permanency, education, and regional labour data.',
       },
     ],
@@ -113,15 +113,15 @@ const AI_PROJECTS = [
     tech: [],
     photos: [
       {
-        src: '/images/SurvivorScreen.png',
+        src: '/images/SurvivorScreen.webp',
         caption: 'The home screen displays the full cast of eight agents as color-coded badges showing each player\'s name alongside their underlying model. From here you can launch a new game with one click or revisit any past game\'s full event log from the history list.',
       },
       {
-        src: '/images/SurvivorChallenge.png',
+        src: '/images/SurvivorChallenge.webp',
         caption: 'The challenge screen shows the live Wheel-of-Fortune-style puzzle board for each tribe side by side, updating as agents guess letters, fumble, or attempt a solve. A step-through action log lets you replay the challenge turn by turn to see exactly which agent made each decision and whether it paid off.',
       },
       {
-        src: '/images/SurvivorSocial.png',
+        src: '/images/SurvivorSocial.webp',
         caption: 'Surfaces all of the losing tribe\'s communication for the round, toggling between the group chat and each private one-on-one conversation via tabbed navigation. This is where agent strategy becomes most visible — alliances form, votes get floated, and agents say very different things depending on who they think is listening.',
       },
     ],
@@ -163,6 +163,8 @@ export default function Works() {
                     src={site.logo}
                     alt={site.name}
                     className="works-client-logo"
+                    loading="lazy"
+                    decoding="async"
                     onError={e => { e.target.style.display = 'none'; }}
                   />
                 </div>
@@ -209,6 +211,8 @@ export default function Works() {
                           src={photo.src}
                           alt={photo.caption || `${proj.name} screenshot ${i + 1}`}
                           className="works-proj-photo"
+                          loading="lazy"
+                          decoding="async"
                         />
                         <span className="works-proj-photo-overlay">View</span>
                       </button>

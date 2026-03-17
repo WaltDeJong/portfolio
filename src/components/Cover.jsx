@@ -21,7 +21,7 @@ function Cover() {
             <div className='coverContent'>
                 <div className='coverContentHeader'>
                     <h1>LET'S GROW.</h1>
-                    <h3>Built to adapt, wired to grow</h3>
+                    <h2>Built to adapt, wired to grow</h2>
                 </div>
                 <div className='coverMiddleRow'>
                     <div className='introText'>
@@ -31,10 +31,10 @@ function Cover() {
                         </div>
                     </div>
                     <div className='coverImage'>
-                        <img src="/images/Grow.png" alt="Illustration representing growth and development" width={350} height={350} />
+                        <img src="/images/Grow.webp" alt="Illustration representing growth and development" style={{ maxWidth: '350px', width: '100%', height: 'auto' }} />
                     </div>
                     <div className='ctaButton'>
-                        <button><a className='deskTopLink' href="#works">View My Projects</a></button>
+                        <a className='ctaLink' href="#works">View My Projects</a>
                     </div>
                 </div>
             </div>
