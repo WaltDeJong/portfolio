@@ -55,6 +55,7 @@
   .icon-container span {
     color: white;
     font-size: 0.8rem; /* Smaller text size for labels */
+    text-align: center;
   }
   
   @media (max-width: 768px) {

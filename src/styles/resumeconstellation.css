@@ -404,7 +404,7 @@
   }
 
   .rc-left {
-    height: 360px;
+    height: 420px;
     flex: none;
   }
 
@@ -430,5 +430,5 @@
     font-size: 1.55rem;
   }
 
-  .rc-left { height: 310px; }
+  .rc-left { height: 380px; }
 }
